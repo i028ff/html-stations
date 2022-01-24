@@ -6,11 +6,15 @@ const returnThisData = function () {
   return this.data;
 };
 // ↑関数の中の処理は変更しないでください
-
+/*
 const object = {
   data: "object data",
   func: returnThisData,
 };
+*/
+const object;
+object = () => returnThisData
+
 
 function getData() {
   return object.func();
