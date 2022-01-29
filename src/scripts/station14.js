@@ -1,4 +1,4 @@
-const { fromNullable } = require("fp-ts/lib/Option")
+const { test } = require("fp-ts")
 
 function getData() {
     // これから作ろうとしているもので、JavaScriptでフルネームを生成する必要が出てきました。
