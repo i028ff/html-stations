@@ -10,15 +10,15 @@ async function getData() {
   return await result
 }
 
-function test(data) {
-  return new Promise(() => {
+function test(userList) {
+  return new Promise((resolve) => {
     setTimeout(() => {
-      const userList2 = data.map(() => {
-        data["full_name"] = data.family_name + " " + data.first_name
-        return data;
-      })
-      return userList2;
-    }, 3000)
+      resolve (
+        userList.map((data) => {
+          data["full_name"] = data.family_name + " " + data.first_name
+          return data;
+      })   
+    )}, 3000)
   });
 }
 
