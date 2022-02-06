@@ -11,6 +11,12 @@ async function getData() {
 }
 
 function test() {
-  return
+  return new Promise((resolve, reject) => {
+    makefull_name(() => {
+      const full_name = userList.family_name + " " + userList.first_name;
+      userList["full_name"] = full_name;
+      return userList;
+    }, 3000);
+  });
 }
 
