@@ -13,7 +13,7 @@ async function getData() {
 function test() {
   return new Promise(() => {
     setTimeout(() => {
-      const full_name = userList.map(() => userList["full_name"] = userList.family_name + " " + userList.first_name)
+      const full_name = userList.map((userList) => userList["full_name"] = userList.family_name + " " + userList.first_name)
       return userList;
     }, 3000)
   });
