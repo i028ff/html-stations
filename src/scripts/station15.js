@@ -11,10 +11,12 @@ async function getData() {
 }
 
 function test() {
-  return new Promise(() => {
-    setTimeout(function() {
-      const full_name = userList.family_name + " " + userList.first_name;
-      userList["full_name"] = full_name;
+  new Promise(function()  {
+    const full_name = userList.family_name + " " + userList.first_name;
+    userList["full_name"] = full_name;
+  });
+  return Promise.then(() => {
+    setTimeout(() => {
       return userList;
     }, 3000)
   });
