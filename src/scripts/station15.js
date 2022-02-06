@@ -11,12 +11,9 @@ async function getData() {
 }
 
 function test() {
-  new Promise(function()  {
-    const full_name = userList.family_name + " " + userList.first_name;
-    userList["full_name"] = full_name;
-  });
-  return Promise.then(() => {
+  return new Promise(() => {
     setTimeout(() => {
+      const full_name = userList.map(() => userList["full_name"] = userList.family_name + " " + userList.first_name)
       return userList;
     }, 3000)
   });
